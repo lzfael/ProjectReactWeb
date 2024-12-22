@@ -5,7 +5,10 @@ function Tasks({tasks, onTaskClick, onTaskDelete}) {
   const navegate = useNavigate()
   
   function handleTaskClick(task){
-    navegate(`/task?title=${task.title}&description=${task.description}`) 
+    const query = new URLSearchParams()
+    query.set("title", task.title)
+    query.set("description", task.description)
+    navegate(`/task?${query.toString()}`) 
   }
 
   return (
