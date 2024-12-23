@@ -10,6 +10,15 @@ function App() {
    useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks));
    }, [tasks]);
+  
+  useEffect(() => {
+    const fechtTasks = async () => {
+    const response = await fetch('https://jsonplaceholder.typicode.com/todos?_limit=6')
+    const data = await response.json()
+    setTasks(data)
+  }
+   fechtTasks()
+  }, [])
 
   function onTaskClick(taskId) {
     const newTasks = tasks.map((task) => {
