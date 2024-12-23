@@ -10,8 +10,8 @@ export function TackPage() {
 
   return (
     <div className="h-screen w-screen bg-slate-500 p-6 flex flex-col items-center justify-start">
-      <div className="w-[500px] space-y-4 mt-6">
-        <div className="flex justify-center relative mb-6">
+      <div className="w-[90%] space-y-4 mt-6">
+        <div className="flex justify-center items-center relative mb-6">
           <button
             className="absolute top-0 left-0 bottom-0 text-slate-100"
             onClick={() => navigate(-1)}
