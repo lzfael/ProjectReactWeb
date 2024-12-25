@@ -2,7 +2,7 @@ import { ChevronRightIcon, Trash2 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import CustomButton from "./CustomButton";
 
-function Tasks({tasks, onTaskClick, onTaskDelete}) {
+export default function Tasks({tasks, onTaskClick, onTaskDelete}) {
   const navegate = useNavigate()
   
   function handleTaskClick(task){
@@ -40,4 +40,3 @@ function Tasks({tasks, onTaskClick, onTaskDelete}) {
     </ul>
   );
 }
-export default Tasks;
