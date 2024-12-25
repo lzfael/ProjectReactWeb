@@ -1,11 +1,11 @@
-export default function Input({ value, onChange, placeholder }) {
+export default function Input(props) {
   return (
     <input
-      type="text"
-      placeholder={placeholder}
+      type={props.type}
+      placeholder={props.placeholder}
       className="border border-slate-300 outline-slate-400 px-4 py-2 rounded-md"
-      value={value}
-      onChange={(event) => onChange(event.target.value)}
+      value={props.value}
+      onChange={props.onChange}
     />
   );
 }
