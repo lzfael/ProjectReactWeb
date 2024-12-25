@@ -14,12 +14,12 @@ function App() {
   useEffect(() => {
     const storedTasks = JSON.parse(localStorage.getItem("tasks"));
     if (!storedTasks || storedTasks.length === 0) {
-      const fechtTasks = async () => {
+      const fetchTasks = async () => {
       const response = await fetch('https://jsonplaceholder.typicode.com/todos?_limit=6')
       const data = await response.json()
       setTasks(data)
     }
-   fechtTasks()
+    fetchTasks()
     }
   }, [])
 
