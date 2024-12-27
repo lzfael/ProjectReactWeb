@@ -1,4 +1,4 @@
-import { ChevronRightIcon, Trash2 } from "lucide-react";
+import { CheckIcon, ChevronRightIcon, Trash2 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import CustomButton from "./CustomButton";
 
@@ -20,8 +20,10 @@ export default function Tasks({tasks, onTaskClick, onTaskDelete}) {
             onClick={() => onTaskClick(task.id)}
             className={`bg-slate-400 text-left w-full flex items-center gap-2 text-white p-2 rounded-md ${
               task.isCompleted && "line-through"
+              
             }`}
           > 
+            {task.isCompleted ? <CheckIcon /> : null}
             {task.title}
           </button>
           <CustomButton onClick={ () => {
